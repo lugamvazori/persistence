@@ -8,12 +8,16 @@ This sample requires you to have
 ### Download Maven
 To get started, [download][maven-download] and [install][maven-install] it.
 
-### Setup
+### Setup [Docker][docker] containers:
 
-* Start [Docker containers][docker]:
+* Start all containers:
     ```shell
     docker-compose -f docker-compose.yml -p persistence up -d
     ```
+* Start specific container:
+   ```shell
+   docker-compose.exe" -f docker-compose.yml -p persistence up -d neo4j
+   ```
 ### Run Application
 
 * In the specific path of each project, open the shell console, install the dependencies and run the application:
