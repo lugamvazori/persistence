@@ -1,7 +1,7 @@
 # Java Persistence
 
 
-## Java Version
+### Java Version
 This sample requires you to have
 [Java11][Java11].
 
