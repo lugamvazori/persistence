@@ -11,10 +11,12 @@ To get started, [download][maven-download] and [install][maven-install] it.
 ### Setup [Docker][docker] containers:
 
 * Start all containers:
+
     ```shell
     docker-compose -f docker-compose.yml -p persistence up -d
     ```
 * Start specific container:
+
    ```shell
    docker-compose -f docker-compose.yml -p persistence up -d neo4j
    ```
