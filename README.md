@@ -17,6 +17,7 @@ To get started, [download][maven-download] and [install][maven-install] it.
 ### Run Application
 
 * In the specific path of each project, open the shell console, install the dependencies and run the application:
+
     ```shell
     mvn clean install -Dmaven.test.skip=true
     ```
