@@ -16,7 +16,7 @@ To get started, [download][maven-download] and [install][maven-install] it.
     ```
 * Start specific container:
    ```shell
-   docker-compose.exe" -f docker-compose.yml -p persistence up -d neo4j
+   docker-compose -f docker-compose.yml -p persistence up -d neo4j
    ```
 ### Run Application
 
