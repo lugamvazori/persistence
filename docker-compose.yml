@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+
+  mysqlsrv:
+    image: mysql
+    container_name: mysql-server
+    restart: unless-stopped
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_USER: fiap
+      MYSQL_PASSWORD: fiap123
+      MYSQL_ROOT_PASSWORD: fiap123
+    ports:
+      - "3306:3306"
+    networks:
+      - fiap-compose-network
+
+  redis:
+    image: redis
+    container_name: redis-server
+    restart: unless-stopped
+    command: redis-server --requirepass fiap123
+    ports:
+      - "6379:6379"
+    networks:
+      - fiap-compose-network
+
+  mongo:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    networks:
+      - fiap-compose-network
+
+networks:
+  fiap-compose-network:
