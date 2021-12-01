@@ -1,15 +1,19 @@
 package dev.luanfernandes.app.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+@ToString
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
-@AllArgsConstructor
+@Document
 public class Person {
 
     @Id
@@ -17,6 +21,7 @@ public class Person {
     private String name;
     private int age;
     private List<Address> address;
+
 
     public Person(String name, int age) {
         this.name = name;
